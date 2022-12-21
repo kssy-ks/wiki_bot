@@ -3,14 +3,14 @@ from aiogram import types, executor, Dispatcher, Bot
 from bs4 import BeautifulSoup
 from selenium import webdriver
 
-bot = Bot(token="5803374262:AAGml5ztmnocy4FPkrDJ1_dmzVDdBU4CbVA")
+
+bot = Bot(token="your_token")
 dp = Dispatcher(bot)
 
 
 @dp.message_handler(commands=['start'])
 async def begin(message: types.Message):
     await bot.send_message(message.chat.id, "Привет")
-
 
 @dp.message_handler(content_types=['text'])
 async def begin(message: types.Message):
